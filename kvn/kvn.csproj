@@ -84,6 +84,12 @@
     <Compile Include="Shipment.Designer.cs">
       <DependentUpon>Shipment.cs</DependentUpon>
     </Compile>
+    <Compile Include="SummaryList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SummaryList.Designer.cs">
+      <DependentUpon>SummaryList.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Agent.resx">
       <DependentUpon>Agent.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Shipment.resx">
       <DependentUpon>Shipment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SummaryList.resx">
+      <DependentUpon>SummaryList.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -36,12 +36,12 @@
             this.labelQuant = new System.Windows.Forms.Label();
             this.labelDate = new System.Windows.Forms.Label();
             this.textBoxQuant = new System.Windows.Forms.TextBox();
-            this.listViewProvider = new System.Windows.Forms.ListView();
+            this.listViewExtra = new System.Windows.Forms.ListView();
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Material = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Agent = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Quantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Quantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.labelMaterial = new System.Windows.Forms.Label();
             this.labelAgent = new System.Windows.Forms.Label();
             this.comboBoxMaterial = new System.Windows.Forms.ComboBox();
@@ -134,27 +134,27 @@
             this.textBoxQuant.Size = new System.Drawing.Size(160, 27);
             this.textBoxQuant.TabIndex = 136;
             // 
-            // listViewProvider
+            // listViewExtra
             // 
-            this.listViewProvider.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.listViewProvider.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewExtra.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.listViewExtra.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ID,
             this.Material,
             this.Agent,
             this.Date,
             this.Quantity});
-            this.listViewProvider.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.listViewProvider.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.listViewProvider.FullRowSelect = true;
-            this.listViewProvider.GridLines = true;
-            this.listViewProvider.HideSelection = false;
-            this.listViewProvider.Location = new System.Drawing.Point(254, 22);
-            this.listViewProvider.MultiSelect = false;
-            this.listViewProvider.Name = "listViewProvider";
-            this.listViewProvider.Size = new System.Drawing.Size(618, 309);
-            this.listViewProvider.TabIndex = 134;
-            this.listViewProvider.UseCompatibleStateImageBehavior = false;
-            this.listViewProvider.View = System.Windows.Forms.View.Details;
+            this.listViewExtra.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listViewExtra.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.listViewExtra.FullRowSelect = true;
+            this.listViewExtra.GridLines = true;
+            this.listViewExtra.HideSelection = false;
+            this.listViewExtra.Location = new System.Drawing.Point(254, 22);
+            this.listViewExtra.MultiSelect = false;
+            this.listViewExtra.Name = "listViewExtra";
+            this.listViewExtra.Size = new System.Drawing.Size(618, 309);
+            this.listViewExtra.TabIndex = 134;
+            this.listViewExtra.UseCompatibleStateImageBehavior = false;
+            this.listViewExtra.View = System.Windows.Forms.View.Details;
             // 
             // ID
             // 
@@ -171,15 +171,15 @@
             this.Agent.Text = "Сотрудник";
             this.Agent.Width = 115;
             // 
-            // Quantity
-            // 
-            this.Quantity.Text = "Количество";
-            this.Quantity.Width = 166;
-            // 
             // Date
             // 
             this.Date.Text = "Дата выдачи";
             this.Date.Width = 174;
+            // 
+            // Quantity
+            // 
+            this.Quantity.Text = "Количество";
+            this.Quantity.Width = 166;
             // 
             // labelMaterial
             // 
@@ -234,7 +234,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::kvn.Properties.Resources.BG_for_IS;
-            this.ClientSize = new System.Drawing.Size(953, 402);
+            this.ClientSize = new System.Drawing.Size(953, 401);
             this.Controls.Add(this.dateTimePickerEx);
             this.Controls.Add(this.comboBoxAgent);
             this.Controls.Add(this.comboBoxMaterial);
@@ -245,7 +245,7 @@
             this.Controls.Add(this.labelQuant);
             this.Controls.Add(this.labelDate);
             this.Controls.Add(this.textBoxQuant);
-            this.Controls.Add(this.listViewProvider);
+            this.Controls.Add(this.listViewExtra);
             this.Controls.Add(this.labelMaterial);
             this.Controls.Add(this.labelAgent);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -267,7 +267,7 @@
         private System.Windows.Forms.Label labelQuant;
         private System.Windows.Forms.Label labelDate;
         private System.Windows.Forms.TextBox textBoxQuant;
-        private System.Windows.Forms.ListView listViewProvider;
+        private System.Windows.Forms.ListView listViewExtra;
         private System.Windows.Forms.ColumnHeader ID;
         private System.Windows.Forms.ColumnHeader Material;
         private System.Windows.Forms.ColumnHeader Agent;
