@@ -39,11 +39,10 @@
             this.Provider = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Quantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Place = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.TotalPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.labelProvider = new System.Windows.Forms.Label();
             this.labelDate = new System.Windows.Forms.Label();
-            this.textBoxMaterial = new System.Windows.Forms.TextBox();
-            this.textBoxProvider = new System.Windows.Forms.TextBox();
-            this.textBoxDate = new System.Windows.Forms.TextBox();
             this.buttonEdit = new System.Windows.Forms.Button();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonDel = new System.Windows.Forms.Button();
@@ -51,8 +50,9 @@
             this.textBoxTotal = new System.Windows.Forms.TextBox();
             this.labelPlace = new System.Windows.Forms.Label();
             this.textBoxPlace = new System.Windows.Forms.TextBox();
-            this.Place = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.TotalPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.comboBoxProvider = new System.Windows.Forms.ComboBox();
+            this.comboBoxMaterial = new System.Windows.Forms.ComboBox();
+            this.dateTimePickerShip = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -148,6 +148,16 @@
             this.Quantity.Text = "Количество";
             this.Quantity.Width = 104;
             // 
+            // Place
+            // 
+            this.Place.Text = "Место расположения";
+            this.Place.Width = 99;
+            // 
+            // TotalPrice
+            // 
+            this.TotalPrice.Text = "Итоговая цена";
+            this.TotalPrice.Width = 96;
+            // 
             // labelProvider
             // 
             this.labelProvider.AutoSize = true;
@@ -169,33 +179,6 @@
             this.labelDate.Size = new System.Drawing.Size(124, 25);
             this.labelDate.TabIndex = 110;
             this.labelDate.Text = "Дата поставки";
-            // 
-            // textBoxMaterial
-            // 
-            this.textBoxMaterial.Font = new System.Drawing.Font("BankGothic RUSS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxMaterial.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBoxMaterial.Location = new System.Drawing.Point(86, 69);
-            this.textBoxMaterial.Name = "textBoxMaterial";
-            this.textBoxMaterial.Size = new System.Drawing.Size(160, 27);
-            this.textBoxMaterial.TabIndex = 109;
-            // 
-            // textBoxProvider
-            // 
-            this.textBoxProvider.Font = new System.Drawing.Font("BankGothic RUSS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxProvider.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBoxProvider.Location = new System.Drawing.Point(86, 124);
-            this.textBoxProvider.Name = "textBoxProvider";
-            this.textBoxProvider.Size = new System.Drawing.Size(160, 27);
-            this.textBoxProvider.TabIndex = 108;
-            // 
-            // textBoxDate
-            // 
-            this.textBoxDate.Font = new System.Drawing.Font("BankGothic RUSS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxDate.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBoxDate.Location = new System.Drawing.Point(86, 186);
-            this.textBoxDate.Name = "textBoxDate";
-            this.textBoxDate.Size = new System.Drawing.Size(160, 27);
-            this.textBoxDate.TabIndex = 107;
             // 
             // buttonEdit
             // 
@@ -280,15 +263,31 @@
             this.textBoxPlace.Size = new System.Drawing.Size(160, 27);
             this.textBoxPlace.TabIndex = 117;
             // 
-            // Place
+            // comboBoxProvider
             // 
-            this.Place.Text = "Место расположения";
-            this.Place.Width = 99;
+            this.comboBoxProvider.Font = new System.Drawing.Font("BankGothic RUSS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxProvider.FormattingEnabled = true;
+            this.comboBoxProvider.Location = new System.Drawing.Point(86, 128);
+            this.comboBoxProvider.Name = "comboBoxProvider";
+            this.comboBoxProvider.Size = new System.Drawing.Size(158, 27);
+            this.comboBoxProvider.TabIndex = 146;
             // 
-            // TotalPrice
+            // comboBoxMaterial
             // 
-            this.TotalPrice.Text = "Итоговая цена";
-            this.TotalPrice.Width = 96;
+            this.comboBoxMaterial.Font = new System.Drawing.Font("BankGothic RUSS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxMaterial.FormattingEnabled = true;
+            this.comboBoxMaterial.Location = new System.Drawing.Point(86, 67);
+            this.comboBoxMaterial.Name = "comboBoxMaterial";
+            this.comboBoxMaterial.Size = new System.Drawing.Size(158, 27);
+            this.comboBoxMaterial.TabIndex = 145;
+            // 
+            // dateTimePickerShip
+            // 
+            this.dateTimePickerShip.Font = new System.Drawing.Font("BankGothic RUSS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateTimePickerShip.Location = new System.Drawing.Point(86, 187);
+            this.dateTimePickerShip.Name = "dateTimePickerShip";
+            this.dateTimePickerShip.Size = new System.Drawing.Size(158, 27);
+            this.dateTimePickerShip.TabIndex = 147;
             // 
             // Shipment
             // 
@@ -296,6 +295,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::kvn.Properties.Resources.BG_for_IS;
             this.ClientSize = new System.Drawing.Size(953, 547);
+            this.Controls.Add(this.dateTimePickerShip);
+            this.Controls.Add(this.comboBoxProvider);
+            this.Controls.Add(this.comboBoxMaterial);
             this.Controls.Add(this.labelTotal);
             this.Controls.Add(this.textBoxTotal);
             this.Controls.Add(this.labelPlace);
@@ -307,9 +309,6 @@
             this.Controls.Add(this.listViewShipment);
             this.Controls.Add(this.labelProvider);
             this.Controls.Add(this.labelDate);
-            this.Controls.Add(this.textBoxMaterial);
-            this.Controls.Add(this.textBoxProvider);
-            this.Controls.Add(this.textBoxDate);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.buttonDel);
@@ -337,9 +336,6 @@
         private System.Windows.Forms.ColumnHeader Quantity;
         private System.Windows.Forms.Label labelProvider;
         private System.Windows.Forms.Label labelDate;
-        private System.Windows.Forms.TextBox textBoxMaterial;
-        private System.Windows.Forms.TextBox textBoxProvider;
-        private System.Windows.Forms.TextBox textBoxDate;
         private System.Windows.Forms.Button buttonEdit;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.Button buttonDel;
@@ -349,5 +345,8 @@
         private System.Windows.Forms.TextBox textBoxPlace;
         private System.Windows.Forms.ColumnHeader Place;
         private System.Windows.Forms.ColumnHeader TotalPrice;
+        private System.Windows.Forms.ComboBox comboBoxProvider;
+        private System.Windows.Forms.ComboBox comboBoxMaterial;
+        private System.Windows.Forms.DateTimePicker dateTimePickerShip;
     }
 }

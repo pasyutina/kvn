@@ -36,17 +36,17 @@
             this.labelQuant = new System.Windows.Forms.Label();
             this.labelDate = new System.Windows.Forms.Label();
             this.textBoxQuant = new System.Windows.Forms.TextBox();
-            this.textBoxMiddleName = new System.Windows.Forms.TextBox();
             this.listViewProvider = new System.Windows.Forms.ListView();
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.LastName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.FirstName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MiddleName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Cost = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Material = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Agent = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Quantity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Date = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.labelMaterial = new System.Windows.Forms.Label();
             this.labelAgent = new System.Windows.Forms.Label();
-            this.textBoxMaterial = new System.Windows.Forms.TextBox();
-            this.textBoxAgent = new System.Windows.Forms.TextBox();
+            this.comboBoxMaterial = new System.Windows.Forms.ComboBox();
+            this.comboBoxAgent = new System.Windows.Forms.ComboBox();
+            this.dateTimePickerEx = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -134,25 +134,15 @@
             this.textBoxQuant.Size = new System.Drawing.Size(160, 27);
             this.textBoxQuant.TabIndex = 136;
             // 
-            // textBoxMiddleName
-            // 
-            this.textBoxMiddleName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBoxMiddleName.Font = new System.Drawing.Font("BankGothic RUSS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxMiddleName.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBoxMiddleName.Location = new System.Drawing.Point(84, 170);
-            this.textBoxMiddleName.Name = "textBoxMiddleName";
-            this.textBoxMiddleName.Size = new System.Drawing.Size(160, 27);
-            this.textBoxMiddleName.TabIndex = 135;
-            // 
             // listViewProvider
             // 
             this.listViewProvider.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.listViewProvider.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ID,
-            this.LastName,
-            this.FirstName,
-            this.MiddleName,
-            this.Cost});
+            this.Material,
+            this.Agent,
+            this.Date,
+            this.Quantity});
             this.listViewProvider.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.listViewProvider.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.listViewProvider.FullRowSelect = true;
@@ -171,25 +161,25 @@
             this.ID.Text = "ID";
             this.ID.Width = 29;
             // 
-            // LastName
+            // Material
             // 
-            this.LastName.Text = "Фамилия";
-            this.LastName.Width = 128;
+            this.Material.Text = "Товар";
+            this.Material.Width = 128;
             // 
-            // FirstName
+            // Agent
             // 
-            this.FirstName.Text = "Имя";
-            this.FirstName.Width = 115;
+            this.Agent.Text = "Сотрудник";
+            this.Agent.Width = 115;
             // 
-            // MiddleName
+            // Quantity
             // 
-            this.MiddleName.Text = "Отчество";
-            this.MiddleName.Width = 166;
+            this.Quantity.Text = "Количество";
+            this.Quantity.Width = 166;
             // 
-            // Cost
+            // Date
             // 
-            this.Cost.Text = "Стоимость услуги";
-            this.Cost.Width = 174;
+            this.Date.Text = "Дата выдачи";
+            this.Date.Width = 174;
             // 
             // labelMaterial
             // 
@@ -213,23 +203,31 @@
             this.labelAgent.TabIndex = 132;
             this.labelAgent.Text = "Сотрудник";
             // 
-            // textBoxMaterial
+            // comboBoxMaterial
             // 
-            this.textBoxMaterial.Font = new System.Drawing.Font("BankGothic RUSS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxMaterial.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBoxMaterial.Location = new System.Drawing.Point(84, 50);
-            this.textBoxMaterial.Name = "textBoxMaterial";
-            this.textBoxMaterial.Size = new System.Drawing.Size(160, 27);
-            this.textBoxMaterial.TabIndex = 131;
+            this.comboBoxMaterial.Font = new System.Drawing.Font("BankGothic RUSS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxMaterial.FormattingEnabled = true;
+            this.comboBoxMaterial.Location = new System.Drawing.Point(86, 51);
+            this.comboBoxMaterial.Name = "comboBoxMaterial";
+            this.comboBoxMaterial.Size = new System.Drawing.Size(158, 27);
+            this.comboBoxMaterial.TabIndex = 143;
             // 
-            // textBoxAgent
+            // comboBoxAgent
             // 
-            this.textBoxAgent.Font = new System.Drawing.Font("BankGothic RUSS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBoxAgent.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.textBoxAgent.Location = new System.Drawing.Point(84, 112);
-            this.textBoxAgent.Name = "textBoxAgent";
-            this.textBoxAgent.Size = new System.Drawing.Size(160, 27);
-            this.textBoxAgent.TabIndex = 130;
+            this.comboBoxAgent.Font = new System.Drawing.Font("BankGothic RUSS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBoxAgent.FormattingEnabled = true;
+            this.comboBoxAgent.Location = new System.Drawing.Point(86, 112);
+            this.comboBoxAgent.Name = "comboBoxAgent";
+            this.comboBoxAgent.Size = new System.Drawing.Size(158, 27);
+            this.comboBoxAgent.TabIndex = 144;
+            // 
+            // dateTimePickerEx
+            // 
+            this.dateTimePickerEx.Font = new System.Drawing.Font("BankGothic RUSS", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateTimePickerEx.Location = new System.Drawing.Point(86, 171);
+            this.dateTimePickerEx.Name = "dateTimePickerEx";
+            this.dateTimePickerEx.Size = new System.Drawing.Size(158, 27);
+            this.dateTimePickerEx.TabIndex = 145;
             // 
             // Extradition
             // 
@@ -237,6 +235,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::kvn.Properties.Resources.BG_for_IS;
             this.ClientSize = new System.Drawing.Size(953, 402);
+            this.Controls.Add(this.dateTimePickerEx);
+            this.Controls.Add(this.comboBoxAgent);
+            this.Controls.Add(this.comboBoxMaterial);
             this.Controls.Add(this.buttonEdit);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.buttonDel);
@@ -244,12 +245,9 @@
             this.Controls.Add(this.labelQuant);
             this.Controls.Add(this.labelDate);
             this.Controls.Add(this.textBoxQuant);
-            this.Controls.Add(this.textBoxMiddleName);
             this.Controls.Add(this.listViewProvider);
             this.Controls.Add(this.labelMaterial);
             this.Controls.Add(this.labelAgent);
-            this.Controls.Add(this.textBoxMaterial);
-            this.Controls.Add(this.textBoxAgent);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Extradition";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -269,16 +267,16 @@
         private System.Windows.Forms.Label labelQuant;
         private System.Windows.Forms.Label labelDate;
         private System.Windows.Forms.TextBox textBoxQuant;
-        private System.Windows.Forms.TextBox textBoxMiddleName;
         private System.Windows.Forms.ListView listViewProvider;
         private System.Windows.Forms.ColumnHeader ID;
-        private System.Windows.Forms.ColumnHeader LastName;
-        private System.Windows.Forms.ColumnHeader FirstName;
-        private System.Windows.Forms.ColumnHeader MiddleName;
-        private System.Windows.Forms.ColumnHeader Cost;
+        private System.Windows.Forms.ColumnHeader Material;
+        private System.Windows.Forms.ColumnHeader Agent;
+        private System.Windows.Forms.ColumnHeader Quantity;
+        private System.Windows.Forms.ColumnHeader Date;
         private System.Windows.Forms.Label labelMaterial;
         private System.Windows.Forms.Label labelAgent;
-        private System.Windows.Forms.TextBox textBoxMaterial;
-        private System.Windows.Forms.TextBox textBoxAgent;
+        private System.Windows.Forms.ComboBox comboBoxMaterial;
+        private System.Windows.Forms.ComboBox comboBoxAgent;
+        private System.Windows.Forms.DateTimePicker dateTimePickerEx;
     }
 }
