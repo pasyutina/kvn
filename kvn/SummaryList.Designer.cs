@@ -37,7 +37,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.labelBalance = new System.Windows.Forms.Label();
             this.textBoxBalance = new System.Windows.Forms.TextBox();
-            this.listViewExtra = new System.Windows.Forms.ListView();
+            this.listViewSum = new System.Windows.Forms.ListView();
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Material = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Ship = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -139,27 +139,27 @@
             this.textBoxBalance.Size = new System.Drawing.Size(160, 27);
             this.textBoxBalance.TabIndex = 149;
             // 
-            // listViewExtra
+            // listViewSum
             // 
-            this.listViewExtra.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.listViewExtra.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.listViewSum.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.listViewSum.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.ID,
             this.Material,
             this.Ship,
             this.Extra,
             this.Balance});
-            this.listViewExtra.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.listViewExtra.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.listViewExtra.FullRowSelect = true;
-            this.listViewExtra.GridLines = true;
-            this.listViewExtra.HideSelection = false;
-            this.listViewExtra.Location = new System.Drawing.Point(252, 21);
-            this.listViewExtra.MultiSelect = false;
-            this.listViewExtra.Name = "listViewExtra";
-            this.listViewExtra.Size = new System.Drawing.Size(618, 255);
-            this.listViewExtra.TabIndex = 148;
-            this.listViewExtra.UseCompatibleStateImageBehavior = false;
-            this.listViewExtra.View = System.Windows.Forms.View.Details;
+            this.listViewSum.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.listViewSum.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.listViewSum.FullRowSelect = true;
+            this.listViewSum.GridLines = true;
+            this.listViewSum.HideSelection = false;
+            this.listViewSum.Location = new System.Drawing.Point(252, 21);
+            this.listViewSum.MultiSelect = false;
+            this.listViewSum.Name = "listViewSum";
+            this.listViewSum.Size = new System.Drawing.Size(618, 255);
+            this.listViewSum.TabIndex = 148;
+            this.listViewSum.UseCompatibleStateImageBehavior = false;
+            this.listViewSum.View = System.Windows.Forms.View.Details;
             // 
             // ID
             // 
@@ -222,7 +222,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.labelBalance);
             this.Controls.Add(this.textBoxBalance);
-            this.Controls.Add(this.listViewExtra);
+            this.Controls.Add(this.listViewSum);
             this.Controls.Add(this.labelShip);
             this.Controls.Add(this.labelExtra);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -245,7 +245,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label labelBalance;
         private System.Windows.Forms.TextBox textBoxBalance;
-        private System.Windows.Forms.ListView listViewExtra;
+        private System.Windows.Forms.ListView listViewSum;
         private System.Windows.Forms.ColumnHeader ID;
         private System.Windows.Forms.ColumnHeader Material;
         private System.Windows.Forms.ColumnHeader Ship;
