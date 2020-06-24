@@ -52,6 +52,7 @@
             this.buttonSum.TabIndex = 27;
             this.buttonSum.Text = "Сводная ведомость";
             this.buttonSum.UseVisualStyleBackColor = false;
+            this.buttonSum.Click += new System.EventHandler(this.buttonSum_Click);
             // 
             // buttonNal
             // 
@@ -66,6 +67,7 @@
             this.buttonNal.TabIndex = 26;
             this.buttonNal.Text = "Наличие оборудования и материалов";
             this.buttonNal.UseVisualStyleBackColor = false;
+            this.buttonNal.Click += new System.EventHandler(this.buttonNal_Click);
             // 
             // buttonExtra
             // 
@@ -80,6 +82,7 @@
             this.buttonExtra.TabIndex = 25;
             this.buttonExtra.Text = "Выдача оборудования и материалов";
             this.buttonExtra.UseVisualStyleBackColor = false;
+            this.buttonExtra.Click += new System.EventHandler(this.buttonExtra_Click);
             // 
             // buttonPriem
             // 
@@ -94,6 +97,7 @@
             this.buttonPriem.TabIndex = 24;
             this.buttonPriem.Text = "Поставка оборудования и материалов";
             this.buttonPriem.UseVisualStyleBackColor = false;
+            this.buttonPriem.Click += new System.EventHandler(this.buttonPriem_Click);
             // 
             // buttonProvider
             // 
@@ -108,6 +112,7 @@
             this.buttonProvider.TabIndex = 23;
             this.buttonProvider.Text = "Поставщики";
             this.buttonProvider.UseVisualStyleBackColor = false;
+            this.buttonProvider.Click += new System.EventHandler(this.buttonProvider_Click);
             // 
             // buttonAgents
             // 
@@ -122,6 +127,7 @@
             this.buttonAgents.TabIndex = 22;
             this.buttonAgents.Text = "Сотрудники";
             this.buttonAgents.UseVisualStyleBackColor = false;
+            this.buttonAgents.Click += new System.EventHandler(this.buttonAgents_Click);
             // 
             // pictureBox1
             // 

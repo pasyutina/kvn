@@ -16,5 +16,41 @@ namespace kvn
         {
             InitializeComponent();
         }
+
+        private void buttonAgents_Click(object sender, EventArgs e)
+        {
+            Form agentSet = new Agent();
+            agentSet.Show();
+        }
+
+        private void buttonProvider_Click(object sender, EventArgs e)
+        {
+            Form providerSet = new Provider();
+            providerSet.Show();
+        }
+
+        private void buttonPriem_Click(object sender, EventArgs e)
+        {
+            Form shipmentSet = new Shipment();
+            shipmentSet.Show();
+        }
+
+        private void buttonExtra_Click(object sender, EventArgs e)
+        {
+            Form extraSet = new Extradition();
+            extraSet.Show();
+        }
+
+        private void buttonNal_Click(object sender, EventArgs e)
+        {
+            Form materialsSet = new Materials();
+            materialsSet.Show();
+        }
+
+        private void buttonSum_Click(object sender, EventArgs e)
+        {
+            Form sumSet = new SummaryList();
+            sumSet.Show();
+        }
     }
 }
